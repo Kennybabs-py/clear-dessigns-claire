@@ -1,0 +1,22 @@
+@use "@/styles/mixins" as *;
+
+.button {
+  border: 1px solid #354259;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  text-transform: capitalize;
+  cursor: pointer;
+  //   @include flex(center, space-between, row);
+
+  &.transparent {
+    background-color: #fff;
+    color: #354259;
+  }
+
+  &.generic {
+    background-color: #354259;
+    color: #fff;
+  }
+}

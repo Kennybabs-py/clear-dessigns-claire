@@ -1,0 +1,28 @@
+@use "@/styles/mixins" as *;
+
+.header {
+  border: 1px solid black;
+  padding: 0 6rem;
+  @include flex(center, space-between, row);
+  box-sizing: border-box;
+}
+
+.nav {
+  border: 1px solid black;
+  @include flex(center, flex-start, row);
+  gap: 7.25rem;
+  box-sizing: border-box;
+
+  .nav_links {
+    ul {
+      list-style: none;
+      @include flex(center, flex-start, row);
+      gap: 2.125rem;
+    }
+  }
+
+  .search__cta {
+    @include flex(center, flex-start, row);
+    gap: 2.9rem;
+  }
+}
