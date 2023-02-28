@@ -1,12 +1,9 @@
 import React from "react";
 import Head from "next/head";
-import { Inter, Montserrat } from "next/font/google";
+import { inter, montserrat } from "@/utils/fonts";
 
 import Header from "./Header";
 import Footer from "./Footer";
-
-const inter = Inter({ subsets: ["latin"] });
-const montserrat = Montserrat({ subsets: ["latin"] });
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
