@@ -1,9 +1,11 @@
 @use "@/styles/mixins" as *;
+// @use "@/styles/utils" as *;
 
 .header {
   padding: 0 6rem;
   @include flex(center, space-between, row);
   box-sizing: border-box;
+  background-color: #ebecee;
 }
 
 .nav {

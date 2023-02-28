@@ -1,4 +1,5 @@
 import React from "react";
+import { raleway } from "@/utils/fonts";
 
 import styles from "./button.module.scss";
 
@@ -12,7 +13,7 @@ export default function Button(props: Props) {
 
   return (
     <button
-      className={`${styles.button} ${
+      className={`${styles.button} ${raleway.className} ${
         !transparent ? styles.generic : styles.transparent
       }`}
     >

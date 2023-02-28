@@ -1,9 +1,9 @@
 import React from "react";
 import Head from "next/head";
-import { inter, montserrat } from "@/utils/fonts";
 
+import { montserrat } from "@/utils/fonts";
 import Header from "./Header";
-import Footer from "./Footer";
+// import Footer from "./Footer";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -16,9 +16,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </Head>
 
       <div className={montserrat.className}>
-        {" "}
         <Header />
-        {/* {children} */}
+        {children}
         {/* <Footer /> */}
       </div>
     </>
