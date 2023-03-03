@@ -5,3 +5,33 @@
   justify-content: $justify;
   flex-flow: $flow;
 }
+
+$breakpoints: (
+  "mobile:": 600px,
+  "tablet": 768px,
+  "sm-desktop": 920px,
+  "desktop": 1366px,
+  "lg-desktop": 1500px,
+);
+
+@mixin mediaMin($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Error getting key #{$breakpoint}";
+    @debug "Breakpoints: #{$breakpoints}";
+  }
+}
+
+@mixin mediaMax($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Error getting key #{$breakpoint}";
+    @debug "Breakpoints: #{$breakpoints}";
+  }
+}

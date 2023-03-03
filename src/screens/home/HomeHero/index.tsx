@@ -1,5 +1,8 @@
-import Button from "@/components/Button";
 import React from "react";
+import Image from "next/image";
+
+import Button from "@/components/Button";
+import HomeHeroImg from "@/assets/home/home_hero_img.png";
 import styles from "./hero.module.scss";
 
 export default function HomeHero() {
@@ -23,7 +26,14 @@ export default function HomeHero() {
       </div>
 
       <div className={styles.hero_image}>
-        <div className={styles.solid_box}></div>
+        <div className={styles.line_box}></div>
+        <Image
+          src={HomeHeroImg}
+          // width={580}
+          // height={620}
+          loading="lazy"
+          alt="modern living room setting"
+        />
       </div>
     </section>
   );
