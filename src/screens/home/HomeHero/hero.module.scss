@@ -12,17 +12,20 @@
   @include mediaMin(tablet) {
     justify-content: space-between;
     flex-flow: row;
+    padding: 91px 3rem;
   }
 
-  @include mediaMin(sm-desktop) {
+  @include mediaMin(lg-desktop) {
     padding: 91px 6rem;
-    justify-content: space-between;
-    flex-flow: row;
   }
 }
 
 .hero_texts {
-  max-width: 570px;
+  max-width: 470px;
+
+  @include mediaMin(lg-desktop) {
+    max-width: 570px;
+  }
 
   h2 {
     font-weight: 500;
@@ -37,7 +40,7 @@
       color: $color-200;
     }
 
-    @include mediaMin(desktop) {
+    @include mediaMin(lg-desktop) {
       line-height: 98px;
     }
   }

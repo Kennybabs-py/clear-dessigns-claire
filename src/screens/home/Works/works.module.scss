@@ -1,0 +1,16 @@
+@use "@/styles/mixins" as *;
+@use "@/styles/variables" as *;
+
+.works {
+  padding: 1rem;
+  box-sizing: border-box;
+  border: 1px solid black;
+
+  @include mediaMin(tablet) {
+    padding: 0 3rem;
+  }
+
+  @include mediaMin(lg-desktop) {
+    padding: 0 6rem;
+  }
+}

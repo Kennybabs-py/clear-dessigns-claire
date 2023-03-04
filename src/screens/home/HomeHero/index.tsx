@@ -29,9 +29,7 @@ export default function HomeHero() {
         <div className={styles.line_box}></div>
         <Image
           src={HomeHeroImg}
-          // width={580}
-          // height={620}
-          loading="lazy"
+          placeholder="blur"
           alt="modern living room setting"
         />
       </div>

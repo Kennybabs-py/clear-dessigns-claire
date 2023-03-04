@@ -2,10 +2,18 @@
 // @use "@/styles/utils" as *;
 
 .header {
-  padding: 0 6rem;
+  padding: 0 1rem;
   @include flex(center, space-between, row);
   box-sizing: border-box;
   background-color: #ebecee;
+
+  @include mediaMin(tablet) {
+    padding: 0 3rem;
+  }
+
+  @include mediaMin(lg-desktop) {
+    padding: 0 6rem;
+  }
 }
 
 .nav {
