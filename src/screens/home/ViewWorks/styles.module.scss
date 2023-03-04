@@ -1,0 +1,31 @@
+@use "@/styles/mixins" as *;
+@use "@/styles/variables" as *;
+
+.view__works {
+  padding: 1.5rem 1rem;
+  background-color: #f6f1ee;
+  box-sizing: border-box;
+  border: 1px solid black;
+
+  @include mediaMin(tablet) {
+    padding: 35px 3rem;
+  }
+
+  @include mediaMin(lg-desktop) {
+    padding: 35px 6rem;
+  }
+
+  &__heading {
+    font-weight: 600;
+    font-size: clamp(3rem, 4vw, 60px);
+    text-align: center;
+    letter-spacing: 0.015em;
+    color: $color-100;
+    text-transform: capitalize;
+
+    span {
+      @extend .view__works__heading;
+      color: #644231;
+    }
+  }
+}
