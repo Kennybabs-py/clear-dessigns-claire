@@ -1,17 +1,10 @@
 import React from "react";
-import styles from "./styles.module.scss";
 import Image from "next/image";
-import { StaticImageData } from "next/image";
 
-type TextImageWrapT = {
-  textRight?: boolean;
-  heading: string;
-  paragraph?: string;
-  imageSrc: string | StaticImageData;
-  solidBox?: boolean;
-};
+import { TextImageWrapType } from "@/types";
+import styles from "./styles.module.scss";
 
-export default function TextImageWrap(props: TextImageWrapT) {
+export default function TextImageWrap(props: TextImageWrapType) {
   const { textRight, heading, paragraph, imageSrc, solidBox } = props;
 
   return (
