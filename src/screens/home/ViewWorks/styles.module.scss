@@ -17,11 +17,16 @@
 
   &__heading {
     font-weight: 600;
-    font-size: clamp(3rem, 4vw, 60px);
+    font-size: clamp(2rem, 3vw, 60px);
     text-align: center;
     letter-spacing: 0.015em;
     color: $color-100;
     text-transform: capitalize;
+    margin-bottom: 2rem;
+
+    @include mediaMin(tablet) {
+      margin-bottom: 95px;
+    }
 
     span {
       @extend .view__works__heading;
