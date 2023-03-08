@@ -1,0 +1,63 @@
+@use "@/styles/mixins" as *;
+@use "@/styles/variables" as *;
+
+.testimonials {
+  padding: 1.5rem 1rem;
+  box-sizing: border-box;
+  border: 1px solid black;
+
+  @include mediaMin(tablet) {
+    padding: 35px 3rem;
+  }
+
+  @include mediaMin(lg-desktop) {
+    padding: 79px 6rem;
+  }
+
+  &__heading {
+    font-weight: 600;
+    font-size: clamp(2rem, 3vw, 60px);
+    text-align: center;
+    letter-spacing: 0.015em;
+    color: $color-100;
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+
+    @include mediaMin(tablet) {
+      margin-bottom: 95px;
+    }
+  }
+}
+
+.testimony__container {
+  border: 1px solid black;
+  display: grid;
+  grid-auto-flow: column;
+  overflow-x: auto;
+  gap: 1.5rem;
+
+  @include mediaMin(desktop) {
+    gap: 2rem;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .testimony {
+    padding: 2rem 1rem 1rem;
+    gap: 2rem;
+    width: 300px;
+    height: 300px;
+    background: #eff1f4;
+    border-radius: 8px;
+    border: inherit;
+
+    @include mediaMin(desktop) {
+      padding: 3rem 2.25rem 2.25rem;
+      gap: 95px;
+      width: 642px;
+      height: 488px;
+    }
+  }
+}
