@@ -11,23 +11,23 @@ export default function Works() {
   return (
     <section className={styles.works}>
       <TextImageWrap
-        heading="Functional and Aesthetic Design Services"
+        headingTwo="Functional and Aesthetic Design Services"
         imageSrc={WorksImageOne}
       />
 
       <TextImageWrap
-        heading="Quality Artworks and Minimalist Wall frames"
+        headingTwo="Quality Artworks and Minimalist Wall frames"
         imageSrc={WorksImageTwo}
         textRight
       />
 
       <TextImageWrap
-        heading="Finishing and Furnishing"
+        headingTwo="Finishing and Furnishing"
         imageSrc={WorksImageThree}
       />
 
       <TextImageWrap
-        heading="Interior Consultations and Renovations"
+        headingTwo="Interior Consultations and Renovations"
         imageSrc={WorksImageFour}
         textRight
       />

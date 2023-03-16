@@ -4,7 +4,7 @@ import { raleway } from "@/utils/fonts";
 import styles from "./button.module.scss";
 
 type Props = {
-  content: string;
+  content?: string;
   transparent?: boolean;
 };
 

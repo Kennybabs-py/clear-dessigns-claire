@@ -2,10 +2,14 @@ import { StaticImageData } from "next/image";
 
 export type TextImageWrapType = {
   textRight?: boolean;
-  heading: string;
+  headingOne?: string;
+  lastWord?: string;
+  headingTwo: string;
   paragraph?: string;
   imageSrc: string | StaticImageData;
   solidBox?: boolean;
+  firstButtonName?: string;
+  secondButtonName?: string;
 };
 
 export type CarouselType = {

@@ -1,11 +1,22 @@
 import React from "react";
 import Image from "next/image";
 
+import Button from "@/components/Button";
 import { TextImageWrapType } from "@/types";
 import styles from "./styles.module.scss";
 
 export default function TextImageWrap(props: TextImageWrapType) {
-  const { textRight, heading, paragraph, imageSrc, solidBox } = props;
+  const {
+    textRight,
+    headingOne,
+    lastWord,
+    headingTwo,
+    paragraph,
+    imageSrc,
+    solidBox,
+    firstButtonName,
+    secondButtonName,
+  } = props;
 
   return (
     <section
@@ -14,12 +25,24 @@ export default function TextImageWrap(props: TextImageWrapType) {
       }`}
     >
       <div className={styles.text__container}>
-        <h2>{heading}</h2>
+        {headingOne && (
+          <h2>
+            {headingOne} <span>{lastWord}</span>
+          </h2>
+        )}
+        <h3>{headingTwo}</h3>
         <p>
           {paragraph
             ? paragraph
             : "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt"}
         </p>
+
+        {(firstButtonName || secondButtonName) && (
+          <div className={styles.ctas}>
+            {firstButtonName && <Button content={firstButtonName} />}
+            {secondButtonName && <Button content={secondButtonName} />}
+          </div>
+        )}
       </div>
 
       <div className={`${styles.image__container}  `}>

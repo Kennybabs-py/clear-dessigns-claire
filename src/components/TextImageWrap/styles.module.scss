@@ -3,7 +3,7 @@
 
 .text_image__wrap {
   @include flex(center, center, column);
-  gap: 2rem;
+  gap: 1.5rem;
   padding: 3rem 0;
   box-sizing: border-box;
   // border: 1px solid black;
@@ -31,6 +31,28 @@
   }
 
   & > h2 {
+    font-weight: 500;
+    font-size: clamp(40px, 3vw, 80px);
+    letter-spacing: 0.015em;
+    margin-bottom: 27px;
+    line-height: normal;
+    color: #000000;
+
+    @include mediaMin(lg-desktop) {
+      line-height: 98px;
+    }
+
+    & > span {
+      font-weight: inherit;
+      font-size: inherit;
+      letter-spacing: inherit;
+      margin-bottom: inherit;
+      line-height: inherit;
+      color: $color-200;
+    }
+  }
+
+  & > h3 {
     font-weight: 600;
     font-size: clamp(20px, 3vw, 28px);
     letter-spacing: 0.015em;
@@ -43,6 +65,16 @@
     font-size: clamp(1rem, 2.5vw, 22px);
     line-height: 27px;
     color: #000000;
+    margin-bottom: 1.5rem;
+
+    @include mediaMin(desktop) {
+      margin-bottom: 62px;
+    }
+  }
+
+  & > .ctas {
+    @include flex(center, flex-start, row);
+    gap: 2rem;
   }
 }
 
