@@ -8,13 +8,6 @@ import Button from "@/components/Button";
 
 import styles from "./header.module.scss";
 
-const navlinks = [
-  { name: "home", navPath: "" },
-  { name: "about us", navPath: "about" },
-  { name: "projects", navPath: "projects" },
-  { name: "products", navPath: "products" },
-];
-
 export default function Header() {
   return (
     <header className={styles.header}>
@@ -49,3 +42,10 @@ export default function Header() {
     </header>
   );
 }
+
+const navlinks = [
+  { name: "home", navPath: "" },
+  { name: "about us", navPath: "about" },
+  { name: "projects", navPath: "projects" },
+  { name: "products", navPath: "products" },
+];
