@@ -1,0 +1,16 @@
+@use "@/styles/mixins" as *;
+@use "@/styles/variables" as *;
+
+.better__interior {
+  padding: 1.5rem 1rem;
+  box-sizing: border-box;
+  background-color: #f6f1ee;
+
+  @include mediaMin(tablet) {
+    padding: 35px 3rem;
+  }
+
+  @include mediaMin(lg-desktop) {
+    padding: 106px 6rem;
+  }
+}

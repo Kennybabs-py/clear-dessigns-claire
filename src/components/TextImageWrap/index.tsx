@@ -30,7 +30,9 @@ export default function TextImageWrap(props: TextImageWrapType) {
             {headingOne} <span>{lastWord}</span>
           </h2>
         )}
-        <h3>{headingTwo}</h3>
+
+        {headingTwo && <h3>{headingTwo}</h3>}
+
         <p>
           {paragraph
             ? paragraph

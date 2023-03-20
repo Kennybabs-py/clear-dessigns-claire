@@ -1,4 +1,10 @@
-import { HomeHero, Works, ViewWorks, Testimonials } from "@/screens/Home";
+import {
+  HomeHero,
+  Works,
+  ViewWorks,
+  Testimonials,
+  BetterInterior,
+} from "@/screens/Home";
 // import styles from "@/styles/Home.module.css";
 
 export default function Home() {
@@ -8,6 +14,7 @@ export default function Home() {
       <Works />
       <ViewWorks />
       <Testimonials />
+      <BetterInterior />
     </>
   );
 }

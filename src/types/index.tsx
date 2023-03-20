@@ -4,7 +4,7 @@ export type TextImageWrapType = {
   textRight?: boolean;
   headingOne?: string;
   lastWord?: string;
-  headingTwo: string;
+  headingTwo?: string;
   paragraph?: string;
   imageSrc: string | StaticImageData;
   solidBox?: boolean;
