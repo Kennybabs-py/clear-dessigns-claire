@@ -5,44 +5,91 @@
 .footer__nav {
   background-color: #181e28;
   color: #fff;
-  padding: 1.5rem 1rem;
-  box-sizing: border-box;
   @include flex(flex-start, space-between, column);
   gap: 2.5rem;
+  padding: 1.5rem 1rem;
+  box-sizing: border-box;
 
   @include mediaMin(tablet) {
-    padding: 86px 3rem;
     @include flex(flex-start, space-between, row);
+    padding: 86px 3rem;
   }
 
-  @include mediaMin(lg-desktop) {
-    padding: 86px 6rem;
+  .nav__category {
+    & > h3 {
+      font-weight: 700;
+      font-size: clamp(1rem, 2.5vw, 1.5rem);
+      text-transform: uppercase;
+      margin-bottom: 24px;
+
+      @include mediaMin(desktop) {
+        margin-bottom: 44px;
+      }
+    }
+
+    ul {
+      list-style: none;
+      @include flex(flex-start, flex-start, column);
+      gap: 24px;
+
+      @include mediaMin(desktop) {
+        gap: 44px;
+      }
+
+      a {
+        font-size: clamp(14px, 2.5vw, 20px);
+      }
+    }
   }
 }
 
-.nav__category {
-  & > h3 {
-    font-weight: 700;
-    font-size: clamp(1rem, 2.5vw, 1.5rem);
-    text-transform: uppercase;
-    margin-bottom: 24px;
+.footer__bottom {
+  padding: 1.5rem 1rem;
+  box-sizing: border-box;
 
-    @include mediaMin(desktop) {
-      margin-bottom: 44px;
+  @include mediaMin(tablet) {
+    padding: 43px 3rem;
+  }
+
+  .social_links {
+    @include flex(center, space-between, row wrap);
+    gap: 3rem;
+
+    ul {
+      list-style: none;
+      @include flex(center, flex-start, row);
+      gap: 1rem;
+
+      li a {
+        @include flex;
+        padding: 10px 11px;
+        background: #f2e9e5;
+        text-decoration: none;
+        border-radius: 50%;
+      }
+    }
+
+    .other_links {
+      @include flex(center, flex-start, row wrap);
+      gap: 3rem;
+
+      @include mediaMin(tablet) {
+        gap: 111px;
+      }
+
+      a {
+        text-decoration: none;
+        font-weight: 500;
+        font-size: clamp(1rem, 2.5vw, 20px);
+        color: #222222;
+      }
     }
   }
 
-  ul {
-    list-style: none;
-    @include flex(flex-start, flex-start, column);
-    gap: 24px;
-
-    @include mediaMin(desktop) {
-      gap: 44px;
-    }
-
-    a {
-      font-size: clamp(14px, 2.5vw, 20px);
-    }
+  & > p {
+    margin-top: 37px;
+    font-weight: 500;
+    font-size: clamp(1rem, 2.5vw, 20px);
+    color: #222222;
   }
 }

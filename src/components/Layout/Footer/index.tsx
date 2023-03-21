@@ -1,10 +1,18 @@
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/router";
+
+import FacebookIcon from "@/assets/facebook_icon.svg";
+import InstagramIcon from "@/assets/instagram_icon.svg";
+import MessageIcon from "@/assets/message_icon.svg";
+import LinkedinIcon from "@/assets/linkedin_icon.svg";
+import TwitterIcon from "@/assets/twitter_icon.svg";
+
 import styles from "./footer.module.scss";
 
 export default function Footer() {
   const router = useRouter();
-  console.log(router);
+  const currentYear = new Date().getFullYear();
 
   const modifiedPath = router.asPath.replace("/", "");
 
@@ -42,7 +50,34 @@ export default function Footer() {
         })}
       </nav>
 
-      <div className={styles.footer__bottom}></div>
+      <div className={styles.footer__bottom}>
+        <div className={styles.social_links}>
+          <ul>
+            {socialLinks.map((item) => {
+              return (
+                <li key={item.idx}>
+                  <a href="">
+                    <Image
+                      src={item.img}
+                      alt="socials"
+                      width={35}
+                      height={31}
+                    />
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+
+          <div className={styles.other_links}>
+            {" "}
+            <Link href="/">Terms &amp; Conditions</Link>
+            <Link href="/">Privacy policy</Link>
+          </div>
+        </div>
+
+        <p>{currentYear}. All design rights reserved by Fatima.</p>
+      </div>
     </footer>
   );
 }
@@ -77,5 +112,28 @@ const navLinks = [
       { id: 2, name: "Offers", defaultPath: "", path: "offers" },
       { id: 3, name: "Services", defaultPath: "", path: "services" },
     ],
+  },
+];
+
+const socialLinks = [
+  {
+    idx: 0,
+    img: InstagramIcon,
+  },
+  {
+    idx: 1,
+    img: FacebookIcon,
+  },
+  {
+    idx: 2,
+    img: MessageIcon,
+  },
+  {
+    idx: 3,
+    img: TwitterIcon,
+  },
+  {
+    idx: 4,
+    img: LinkedinIcon,
   },
 ];
