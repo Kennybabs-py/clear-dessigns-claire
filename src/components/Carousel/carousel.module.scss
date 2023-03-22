@@ -1,29 +1,6 @@
 @use "@/styles/mixins" as *;
 @use "@/styles/variables" as *;
 
-%custom-scrollbar {
-  &::-webkit-scrollbar {
-    height: 4px;
-    border-radius: 4px;
-  }
-
-  /* Handle */
-  &::-webkit-scrollbar-thumb {
-    background: transparent;
-    border-radius: 8px;
-  }
-
-  /* Track */
-  &::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
-  /* Handle */
-  &::-webkit-scrollbar-thumb:hover {
-    background: #bcb7b7;
-  }
-}
-
 .carousel {
   //   border: 1px solid black;
 
