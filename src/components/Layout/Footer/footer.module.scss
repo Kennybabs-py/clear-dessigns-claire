@@ -1,6 +1,6 @@
 @use "@/styles/mixins" as *;
 @use "@/styles/variables" as *;
-// @use "@/styles/utils" as *;
+@use "@/styles/utils" as *;
 
 .footer__nav {
   background-color: #181e28;
@@ -12,10 +12,19 @@
 
   @include mediaMin(tablet) {
     @include flex(flex-start, space-between, row);
+    padding: 40px 3rem;
+  }
+
+  @include mediaMin(sm-desktop) {
     padding: 86px 3rem;
   }
 
   .nav__category {
+    @include mediaMax(mobile) {
+      @include flex(flex-start, flex-start, row);
+      gap: 1.5rem;
+    }
+
     & > h3 {
       font-weight: 700;
       font-size: clamp(1rem, 2.5vw, 1.5rem);

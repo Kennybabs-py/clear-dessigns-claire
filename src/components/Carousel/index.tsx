@@ -14,7 +14,12 @@ export default function Carousel(props: CarouselType) {
 
           return (
             <div key={id} className={styles.image__container}>
-              <Image src={staticImg} alt="carousel" />
+              <Image
+                src={staticImg}
+                alt="carousel"
+                loading="lazy"
+                placeholder="blur"
+              />
             </div>
           );
         })}

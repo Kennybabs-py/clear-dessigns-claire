@@ -13,6 +13,12 @@ export const homeCarousel = [
   { id: 0, staticImg: CarouselImgOne },
   { id: 1, staticImg: CarouselImgTwo },
   { id: 2, staticImg: CarouselImgThree },
+  { id: 3, staticImg: CarouselImgTwo },
+  { id: 4, staticImg: CarouselImgThree },
+  { id: 5, staticImg: CarouselImgTwo },
+  { id: 6, staticImg: CarouselImgThree },
+  { id: 7, staticImg: CarouselImgTwo },
+  { id: 8, staticImg: CarouselImgThree },
 ];
 
 export const testimonialsData = [

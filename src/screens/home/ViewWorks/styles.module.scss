@@ -8,7 +8,7 @@
   // border: 1px solid black;
 
   @include mediaMin(tablet) {
-    padding: 35px 3rem;
+    padding: 35px 1.5rem;
   }
 
   @include mediaMin(lg-desktop) {
