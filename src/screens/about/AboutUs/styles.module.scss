@@ -1,0 +1,104 @@
+@use "@/styles/mixins" as *;
+@use "@/styles/variables" as *;
+
+.about_us {
+  padding: 1rem 0;
+  box-sizing: border-box;
+  background-color: $color-400;
+
+  @include mediaMin(tablet) {
+    padding: 22px 0;
+  }
+
+  //   @include mediaMin(lg-desktop) {
+  //     padding: 22px 6rem;
+  //   }
+
+  & > h2 {
+    font-weight: 600;
+    font-size: clamp(2rem, 3vw, 52px);
+    text-align: center;
+    letter-spacing: 0.015em;
+    color: #222222;
+    margin-bottom: 40px;
+
+    @include mediaMin(tablet) {
+      margin-bottom: 68px;
+    }
+
+    & > span {
+      font-weight: inherit;
+      font-size: inherit;
+      letter-spacing: inherit;
+      color: #644231;
+      margin-bottom: inherit;
+    }
+  }
+
+  .content {
+    @include flex(center, center, row wrap);
+    gap: 3rem;
+    padding: 0 1rem;
+
+    @include mediaMin(tablet) {
+      @include flex(center, center, row);
+
+      gap: 84px;
+    }
+
+    &__images {
+      position: relative;
+      @include flex;
+      width: 60%;
+      min-width: 300px;
+      max-width: 637px;
+      // height: 605px;
+      aspect-ratio: 1.05/1;
+
+      img {
+        border-radius: 12px;
+        object-fit: cover;
+
+        &:first-of-type {
+          width: 95%;
+          height: 95%;
+        }
+
+        &:last-of-type {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 55%;
+          height: 55%;
+          z-index: 5;
+        }
+      }
+    }
+
+    &__texts {
+      max-width: 570px;
+
+      p {
+        font-weight: 600;
+        font-size: clamp(1rem, 2.5vw, 1.5rem);
+
+        & > span {
+          font-weight: inherit;
+          font-size: inherit;
+          color: #354259;
+        }
+      }
+
+      & > div {
+        border-left: 4px solid #354259;
+        padding-left: 1.5rem;
+        margin: 25px 0;
+        box-sizing: border-box;
+
+        @include mediaMin(tablet) {
+          padding-left: 37px;
+        }
+      }
+    }
+  }
+}

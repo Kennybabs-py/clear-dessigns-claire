@@ -4,7 +4,7 @@
 .better__interior {
   padding: 1.5rem 1rem;
   box-sizing: border-box;
-  background-color: #f6f1ee;
+  background-color: $color-400;
 
   @include mediaMin(tablet) {
     padding: 35px 3rem;
