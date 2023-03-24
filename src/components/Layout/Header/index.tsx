@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 import CdcLogo from "@/assets/cdc_logo.svg";
 import SearchIcon from "@/assets/SearchIcon.svg";
@@ -9,8 +10,15 @@ import Button from "@/components/Button";
 import styles from "./header.module.scss";
 
 export default function Header() {
+  const { asPath } = useRouter();
+
   return (
-    <header className={styles.header}>
+    <header
+      className={styles.header}
+      style={{
+        backgroundColor: asPath.replace("/", "") === "" ? "#ebecee" : "inherit",
+      }}
+    >
       <Link href="/">
         <Image
           src={CdcLogo}

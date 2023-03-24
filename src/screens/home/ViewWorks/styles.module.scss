@@ -2,18 +2,9 @@
 @use "@/styles/variables" as *;
 
 .view__works {
-  padding: 1.5rem 1rem;
   background-color: #f6f1ee;
   box-sizing: border-box;
   // border: 1px solid black;
-
-  @include mediaMin(tablet) {
-    padding: 35px 1.5rem;
-  }
-
-  @include mediaMin(lg-desktop) {
-    padding: 35px 6rem;
-  }
 
   &__heading {
     font-weight: 600;
