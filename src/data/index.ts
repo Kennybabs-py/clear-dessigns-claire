@@ -55,3 +55,27 @@ export const testimonialsData = [
     name: "charles mark",
   },
 ];
+
+export const valuesData = [
+  {
+    id: 0,
+    title: "innovative",
+    text: `Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+  amet sint. Velit officia consequat duis enim velit mollit.
+  Exercitation veniam consequat sunt`,
+  },
+  {
+    id: 1,
+    title: "competence",
+    text: `Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+  amet sint. Velit officia consequat duis enim velit mollit.
+  Exercitation veniam consequat sunt`,
+  },
+  {
+    id: 2,
+    title: "trust",
+    text: `Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+  amet sint. Velit officia consequat duis enim velit mollit.
+  Exercitation veniam consequat sunt`,
+  },
+];
