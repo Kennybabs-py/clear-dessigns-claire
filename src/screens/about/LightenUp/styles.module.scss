@@ -1,0 +1,16 @@
+@use "@/styles/mixins" as *;
+@use "@/styles/variables" as *;
+
+.lighten {
+  padding: 1.5rem 1rem;
+  box-sizing: border-box;
+  background-color: $color-400;
+
+  @include mediaMin(tablet) {
+    padding: 35px 3rem;
+  }
+
+  @include mediaMin(lg-desktop) {
+    padding: 106px 6rem;
+  }
+}

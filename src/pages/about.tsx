@@ -1,5 +1,4 @@
-import { AboutHero, AboutUs, Values } from "@/screens/About";
-// import styles from "@/styles/Home.module.css";
+import { AboutHero, AboutUs, Values, LightenUp } from "@/screens/About";
 
 export default function Home() {
   return (
@@ -7,6 +6,7 @@ export default function Home() {
       <AboutHero />
       <AboutUs />
       <Values />
+      <LightenUp />
     </>
   );
 }
