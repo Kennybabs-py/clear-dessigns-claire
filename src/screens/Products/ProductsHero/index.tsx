@@ -1,13 +1,13 @@
-import React from "react";
+import Image from "next/image";
 
-// import styles from "./hero.module.scss";
 import HeroTextImageWrap from "@/components/HeroTextImageWrap";
-import Carousel from "@/components/Carousel";
-import { homeCarousel } from "@/data";
+import heroImg from "@/assets/products/products_hero_img.png";
+
+import styles from "./styles.module.scss";
 
 export default function ProductsHero() {
   return (
-    <section>
+    <section className={styles.products__hero}>
       <HeroTextImageWrap
         heroHeadingOne={
           <h2>
@@ -20,7 +20,11 @@ export default function ProductsHero() {
             space that extra touch
           </h3>
         }
-        heroGallery={<Carousel data={homeCarousel} />}
+        heroGallery={
+          <figure className={styles.hero__image}>
+            <Image src={heroImg} alt="products hero" />
+          </figure>
+        }
       />
     </section>
   );

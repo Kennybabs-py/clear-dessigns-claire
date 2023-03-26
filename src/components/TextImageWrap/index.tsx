@@ -9,7 +9,6 @@ export default function TextImageWrap(props: TextImageWrapType) {
   const {
     textRight,
     headingOne,
-    lastWord,
     headingTwo,
     paragraph,
     imageSrc,
@@ -25,11 +24,7 @@ export default function TextImageWrap(props: TextImageWrapType) {
       }`}
     >
       <div className={styles.text__container}>
-        {headingOne && (
-          <h2>
-            {headingOne} <span>{lastWord}</span>
-          </h2>
-        )}
+        {headingOne && headingOne}
 
         {headingTwo && <h3>{headingTwo}</h3>}
 

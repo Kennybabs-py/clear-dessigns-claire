@@ -14,8 +14,9 @@
     color: $color-100;
     text-transform: capitalize;
     margin-bottom: 2rem;
+    padding: 1.5rem 0;
 
-    @include mediaMin(tablet) {
+    @include mediaMin(desktop) {
       margin-bottom: 95px;
     }
 

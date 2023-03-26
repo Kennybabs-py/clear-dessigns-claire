@@ -1,9 +1,9 @@
+import { ReactNode } from "react";
 import { StaticImageData } from "next/image";
 
 export type TextImageWrapType = {
   textRight?: boolean;
-  headingOne?: string;
-  lastWord?: string;
+  headingOne?: ReactNode;
   headingTwo?: string;
   paragraph?: string;
   imageSrc: string | StaticImageData;

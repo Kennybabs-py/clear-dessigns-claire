@@ -45,7 +45,7 @@
   .value {
     padding: 2rem 1rem 1rem;
     gap: 2rem;
-    width: 300px;
+    width: clamp(280px, 50vmax, 413px);
     aspect-ratio: 1.15/1;
     background: #edf5ff;
     border-radius: 11px;
@@ -54,17 +54,12 @@
     @include mediaMin(desktop) {
       padding: 34px 2.25rem 3.6rem;
       gap: 50px;
-      width: 413px;
     }
 
-    &:nth-of-type(even) {
+    &:nth-of-type(2n) {
       background: #eff1f4;
       width: 320px;
-      aspect-ratio: 1.15/1;
-
-      @include mediaMin(desktop) {
-        width: 460px;
-      }
+      width: clamp(300px, 50vmax, 460px);
     }
 
     .title__img {

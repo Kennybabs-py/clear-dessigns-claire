@@ -35,7 +35,7 @@
       height: 300px;
     }
 
-    @include mediaMin(sm-desktop) {
+    @include mediaMin(desktop) {
       max-width: 510px;
       height: 530px;
     }

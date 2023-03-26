@@ -8,8 +8,11 @@ export default function BetterInterior() {
     <section className={styles.better__interior}>
       <TextImageWrap
         textRight
-        headingOne="Your Interior just got"
-        lastWord="Better"
+        headingOne={
+          <h2>
+            Your interior just got <span>Better</span>
+          </h2>
+        }
         firstButtonName="contact us"
         imageSrc={`https://res.cloudinary.com/da9s8mfnz/image/upload/v1678977992/home_image_interior_kluvvs.png`}
       />

@@ -1,21 +1,19 @@
-import React from "react";
-
 import TextImageWrap from "@/components/TextImageWrap";
-import lightenImage from "@/assets/about/lighten_up.png";
 import styles from "./styles.module.scss";
+import extraTouchImg from "@/assets/products/extra_touch.png";
 
-export default function LightenUp() {
+export default function ExtraTouch() {
   return (
-    <section className={styles.lighten}>
+    <section className={styles.extra__touch}>
       <TextImageWrap
         textRight
         headingOne={
           <h2>
-            Let&apos;s lighten up your <span>Home</span>
+            Get that <span>Extra Touch</span> you want
           </h2>
         }
         firstButtonName="contact us"
-        imageSrc={lightenImage}
+        imageSrc={extraTouchImg}
       />
     </section>
   );

@@ -9,6 +9,16 @@ import clientImgTwo from "@/assets/home/client_two.png";
 import clientImgThree from "@/assets/home/client_one.png";
 import clientImgFour from "@/assets/home/client_two.png";
 
+//artworks
+import artworkImgOne from "@/assets/products/artwork_one.png";
+import artworkImgTwo from "@/assets/products/artwork_two.png";
+import artworkImgThree from "@/assets/products/artwork_three.png";
+
+//frames
+import framesImgOne from "@/assets/products/frames_one.png";
+import framesImgTwo from "@/assets/products/frames_two.png";
+import framesImgThree from "@/assets/products/frames_three.png";
+
 export const homeCarousel = [
   { id: 0, staticImg: CarouselImgOne },
   { id: 1, staticImg: CarouselImgTwo },
@@ -78,4 +88,16 @@ export const valuesData = [
   amet sint. Velit officia consequat duis enim velit mollit.
   Exercitation veniam consequat sunt`,
   },
+];
+
+export const artworksData = [
+  { id: 0, staticImg: artworkImgOne },
+  { id: 1, staticImg: artworkImgTwo },
+  { id: 2, staticImg: artworkImgThree },
+];
+
+export const framesData = [
+  { id: 0, staticImg: framesImgOne },
+  { id: 1, staticImg: framesImgTwo },
+  { id: 2, staticImg: framesImgThree },
 ];

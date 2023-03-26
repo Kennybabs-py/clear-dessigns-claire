@@ -1,0 +1,70 @@
+@use "@/styles/mixins" as *;
+@use "@/styles/variables" as *;
+
+.artworks {
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+
+  @include mediaMin(tablet) {
+    padding: 35px 3rem;
+  }
+
+  @include mediaMin(lg-desktop) {
+    padding: 96px 6rem;
+  }
+
+  & > h2 {
+    font-weight: 600;
+    font-size: clamp(28px, 3.5vw, 52px);
+    text-align: center;
+    letter-spacing: 0.015em;
+    color: #354259;
+    margin-bottom: 1rem;
+  }
+
+  .filter__viewall {
+    @include flex(center, space-between, row);
+
+    a {
+      font-weight: 600;
+      font-size: clamp(1rem, 2.5vw, 30px);
+      letter-spacing: 0.015em;
+      color: $color-100;
+
+      &:has(img) {
+        @include flex(center, flex-start, row);
+        gap: 12px;
+      }
+
+      &:last-of-type {
+        color: $color-200;
+      }
+    }
+  }
+
+  &_list {
+    // display: grid;
+    // grid-auto-flow: column;
+    // overflow-x: hidden;
+    // grid-auto-columns: auto;
+    @include flex(center, center, row wrap);
+    gap: 1.5rem;
+    margin-top: 26px;
+
+    @include mediaMin(tablet) {
+      flex-flow: row;
+      margin-top: 50px;
+    }
+
+    figure {
+      width: clamp(300px, 100%, 415px);
+      aspect-ratio: 1/1;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
