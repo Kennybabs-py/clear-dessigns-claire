@@ -1,21 +1,11 @@
 import React from "react";
 import Image from "next/image";
 
-import Button from "@/components/Button";
-import { TextImageWrapType } from "@/types";
+import { ProjectWrapType } from "@/types";
 import styles from "./styles.module.scss";
 
-export default function TextImageWrap(props: TextImageWrapType) {
-  const {
-    textRight,
-    headingOne,
-    headingTwo,
-    paragraph,
-    imageSrc,
-    solidBox,
-    firstButtonName,
-    secondButtonName,
-  } = props;
+export default function ProjectsWrap(props: ProjectWrapType) {
+  const { textRight, headingTwo, paragraph, imageSrc } = props;
 
   return (
     <section
@@ -24,8 +14,6 @@ export default function TextImageWrap(props: TextImageWrapType) {
       }`}
     >
       <div className={styles.text__container}>
-        {headingOne && headingOne}
-
         {headingTwo && <h3>{headingTwo}</h3>}
 
         <p>
@@ -33,25 +21,12 @@ export default function TextImageWrap(props: TextImageWrapType) {
             ? paragraph
             : "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt"}
         </p>
-
-        {(firstButtonName || secondButtonName) && (
-          <div className={styles.ctas}>
-            {firstButtonName && <Button content={firstButtonName} />}
-            {secondButtonName && <Button content={secondButtonName} />}
-          </div>
-        )}
       </div>
 
       <div className={`${styles.image__container}  `}>
-        <div
-          className={`${styles.solid_box} ${solidBox && styles.solid} ${
-            textRight ? styles.box_right : styles.box_left
-          }`}
-        ></div>
         <Image
           src={imageSrc}
           alt="Clear Designs by Claire"
-          fill
           placeholder="blur"
           loading="lazy"
         />

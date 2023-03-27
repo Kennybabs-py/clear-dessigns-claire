@@ -1,0 +1,37 @@
+@use "@/styles/mixins" as *;
+@use "@/styles/variables" as *;
+
+.view__projects {
+  padding: 1rem;
+  background: #f5f6fa;
+  box-sizing: border-box;
+
+  @include mediaMin(tablet) {
+    padding: 2rem 3rem;
+  }
+
+  @include mediaMin(lg-desktop) {
+    padding: 2rem 6rem;
+  }
+
+  & > h2 {
+    font-weight: 600;
+    font-size: clamp(2rem, 3vw, 52px);
+    text-align: center;
+    letter-spacing: 0.015em;
+    color: $color-100;
+    margin-bottom: 18px;
+
+    & > span {
+      font-weight: inherit;
+      font-size: inherit;
+      letter-spacing: inherit;
+      margin-bottom: inherit;
+      color: $color-200;
+    }
+
+    @include mediaMin(desktop) {
+      margin-bottom: 30px;
+    }
+  }
+}

@@ -15,3 +15,8 @@ export type TextImageWrapType = {
 export type CarouselType = {
   data: { id: number; staticImg: string | StaticImageData }[];
 };
+
+export type ProjectWrapType = Omit<
+  TextImageWrapType,
+  "headingOne" | "solidBox" | "firstButtonName" | "secondButtonName"
+>;
